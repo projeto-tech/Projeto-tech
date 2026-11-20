@@ -4,6 +4,9 @@ Projeto acadêmico da Global Solution 2026/2 da FIAP, alinhado ao ODS 3 — Saú
 
 O projeto é uma demonstração. Ele não realiza diagnóstico médico, não substitui profissionais de saúde e não possui integração real com serviços de atendimento. Os trajetos e tempos usados na simulação são fictícios.
 
+## Vercel
+https://projeto-tech-seven.vercel.app/
+
 ## Funcionalidades
 
 - Quatro páginas: Início, Solução, Impacto e Equipe.
