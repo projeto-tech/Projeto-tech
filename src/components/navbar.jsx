@@ -1,50 +1,43 @@
-import { Link } from "react-router-dom";
+import { useState } from "react";
+import { Link, NavLink } from "react-router-dom";
+
+const links = [
+  { caminho: "/", nome: "Início" },
+  { caminho: "/solucao", nome: "Solução" },
+  { caminho: "/impacto", nome: "Impacto" },
+  { caminho: "/contato", nome: "Equipe" },
+];
 
 function Navbar() {
+  const [aberto, setAberto] = useState(false);
+
   return (
-    <nav className="navbar navbar-expand-lg navbar-custom">
+    <nav className="navbar navbar-expand-lg navbar-custom" aria-label="Navegação principal">
       <div className="container navbar-container">
-        <Link className="navbar-brand" to="/">
+        <Link className="navbar-brand" to="/" onClick={() => setAberto(false)}>
           Projeto tech
         </Link>
 
         <button
-          className="navbar-toggler bg-light"
+          className="navbar-toggler"
           type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#menu"
           aria-controls="menu"
-          aria-expanded="false"
-          aria-label="Abrir menu de navegação"
+          aria-expanded={aberto}
+          aria-label="Menu de navegação"
+          onClick={() => setAberto(!aberto)}
         >
           <span className="navbar-toggler-icon"></span>
         </button>
 
-        <div className="collapse navbar-collapse navbar-menu" id="menu">
+        <div className={`collapse navbar-collapse navbar-menu${aberto ? " show" : ""}`} id="menu">
           <ul className="navbar-nav navbar-links">
-            <li className="nav-item">
-              <Link className="nav-link" to="/">
-                Início
-              </Link>
-            </li>
-
-            <li className="nav-item">
-              <Link className="nav-link" to="/solucao">
-                Solução
-              </Link>
-            </li>
-
-            <li className="nav-item">
-              <Link className="nav-link" to="/impacto">
-                Impacto
-              </Link>
-            </li>
-
-            <li className="nav-item">
-              <Link className="nav-link" to="/contato">
-                Contato
-              </Link>
-            </li>
+            {links.map(({ caminho, nome }) => (
+              <li className="nav-item" key={caminho}>
+                <NavLink className="nav-link" to={caminho} end onClick={() => setAberto(false)}>
+                  {nome}
+                </NavLink>
+              </li>
+            ))}
           </ul>
         </div>
       </div>

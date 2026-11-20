@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import image from "../assets/imgs/divisor.png";
 import iconesaude from "../assets/imgs/icone-saude.png";
 import Triagem from "../components/triagem";
@@ -11,7 +10,7 @@ function Solucao() {
           Orientação de saúde para quem vive longe
         </h1>
         <p className="solucao__subtitulo">
-          Saiba o que fazer, quando tempo leva a viagem e o que levar antes de sair da sua comunidade.
+          Saiba o que fazer, quanto tempo leva a viagem e o que levar antes de sair da sua comunidade.
         </p>
         <img className="solucao__icone" src={iconesaude} alt="Ícone de saúde" />
       </header>
@@ -24,7 +23,7 @@ function Solucao() {
           Simulação
         </h2>
         <p className="solucao__subtitulo-secundario">
-            Aqui nesta simulação colocamos apenas algumas das comunidades indigenas isoladas do Brasil. A ideia é que a triagem e orientação de saúde funcione para qualquer comunidade isolada, em qualquer lugar do mundo.
+            Aqui nesta simulação colocamos apenas algumas das comunidades indígenas isoladas do Brasil. A ideia é que a triagem e orientação de saúde funcione para qualquer comunidade isolada, em qualquer lugar do mundo.
         </p>
         <Triagem />
       </section>

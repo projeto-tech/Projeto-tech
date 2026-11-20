@@ -7,7 +7,7 @@ import Terminal from "../components/terminal";
 const paragrafos = [
   "Para quem vive em uma comunidade remota, uma emergência de saúde pode significar horas, ou até dias, de viagem até o atendimento mais próximo.",
   [
-    { t: "Tendo em vista que mais de 196 povos indígenas isolados vivem hoje sem contato permanente com a sociedade, a principal ameaça à saúde das comunidades isoladas é a " },
+    { t: "Tendo em vista que 119 povos indígenas vivem isolados no Brasil, sem contato permanente com a sociedade, uma das ameaças à saúde dessas comunidades é a " },
     { t: "vulnerabilidade imunológica a doenças infecciosas trazidas de fora", c: "destaque-ciano" },
     { t: ", que podem causar epidemias devastadoras e dizimar grupos inteiros em pouco tempo." },
   ],
@@ -32,7 +32,32 @@ function Inicio() {
         <img className="inicio__icone" src={iconeConexao} alt="" />
       </header>
 
-      <Terminal paragrafos={paragrafos} velocidade={20}>
+      <Terminal paragrafos={paragrafos} velocidade={15}>
+        <p className="terminal__fonte">
+          Referências:{" "}
+          <a
+            href="https://www.scielo.br/j/sausoc/a/FCbgWRhHQPs9TfxXkwZdqzh/?lang=pt"
+            target="_blank"
+            rel="noreferrer"
+          >
+            SciELO
+          </a>,{" "}
+          <a
+            href="https://agenciabrasil.ebc.com.br/radioagencia-nacional/direitos-humanos/audio/2025-03/brasil-tem-119-povos-indigenas-vivendo-isolados"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Agência Brasil
+          </a>{" "}
+          e{" "}
+          <a
+            href="https://www.nationalgeographicbrasil.com/meio-ambiente/2024/08/o-que-sao-povos-indigenas-isolados"
+            target="_blank"
+            rel="noreferrer"
+          >
+            National Geographic Brasil
+          </a>.
+        </p>
         <Link className="botao-solucao" to="/solucao">
           <img src={botaoSolucao} alt="Testar a simulação" />
         </Link>

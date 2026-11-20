@@ -122,7 +122,8 @@ function Triagem() {
       )}
 
       <p className="triagem__aviso">
-        Esta ferramenta é uma demonstração e tudo que está aqui é apenas para fins educacionais, o tipo de locomoção são ficticios.
+        Esta ferramenta é uma demonstração para fins educacionais. As associações entre comunidades,
+        trajetos, tempos e meios de transporte usadas na simulação são fictícias.
         Em caso de emergência, ligue 192 (SAMU).
       </p>
     </section>

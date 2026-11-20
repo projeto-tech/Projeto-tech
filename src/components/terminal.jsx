@@ -20,7 +20,7 @@ function parcial(p, quantas) {
 function Terminal({
   paragrafos,
   prompt = "c:\\projeto-tech>",
-  velocidade = 20,
+  velocidade = 15,
   classeSecao = "terminal",
   classeCorpo = "terminal__corpo",
   classePrompt = "terminal__prompt",
@@ -44,7 +44,7 @@ function Terminal({
           setLetras(0);
         }
       },
-      fim ? 400 : velocidade
+      fim ? 300 : velocidade
     );
 
     return () => clearTimeout(id);

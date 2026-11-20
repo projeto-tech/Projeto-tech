@@ -20,7 +20,7 @@ function Impacto() {
         <img className="impacto__icone" src={iconeLista} alt="" />
       </header>
 
-      <Terminal paragrafos={paragrafos} velocidade={20} />
+      <Terminal paragrafos={paragrafos} velocidade={15} />
 
       <img className="impacto__cidade" src={heroCyberpun} alt="" />
     </div>
